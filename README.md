@@ -1,4 +1,4 @@
-# PHP Script Example
+# Exercise PHP
 
 This repository contains a PHP script that demonstrates various PHP functionalities including text output, loops, arrays, and custom functions for basic arithmetic operations.
 
@@ -89,3 +89,78 @@ echo "Hasil pengurangan $a dan $b adalah " . pengurangan($a, $b) . "\n";
 echo "Hasil perkalian $a dan $b adalah " . perkalian($a, $b) . "\n";
 echo "Hasil pembagian $a dan $b adalah " . pembagian($a, $b) . "\n";
 ?>
+```
+
+# Exercise PHP & HTML
+
+This repository contains a PHP script that demonstrates various functionalities, including displaying text, generating lists, creating tables, and rendering forms using PHP embedded in HTML.
+
+## Description
+
+The script performs the following tasks:
+
+1. Displays the text "Hello World" as an HTML heading.
+2. Displays a list of month names from January to December as an HTML unordered list.
+3. Displays a sample HTML table with arbitrary data.
+4. Displays an HTML form for user input.
+
+## Code Explanation
+
+### HTML Structure
+
+The HTML structure sets up a basic webpage with a title and some styling for a table. The PHP code is embedded within the HTML to dynamically generate content.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP Example</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <?php
+    // Menampilkan "Hello World"
+    echo "<h1>Hello World</h1>";
+
+    // Menampilkan list berisi nama bulan dari Januari hingga Desember
+    $months = array("Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember");
+    echo "<ul>";
+    foreach ($months as $month) {
+        echo "<li>$month</li>";
+    }
+    echo "</ul>";
+
+    // Menampilkan sebuah tabel berisi apapun
+    echo "<table>";
+    echo "<tr><th>Header 1</th><th>Header 2</th></tr>";
+    echo "<tr><td>Data 1</td><td>Data 2</td></tr>";
+    echo "<tr><td>Data 3</td><td>Data 4</td></tr>";
+    echo "</table>";
+
+    // Menampilkan formulir
+    ?>
+    <form action="#" method="post">
+        <label for="name">Nama:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+
